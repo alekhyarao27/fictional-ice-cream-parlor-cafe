@@ -1,3 +1,4 @@
+# models.py
 import sqlite3
 
 def create_tables():
@@ -30,6 +31,14 @@ def create_tables():
             flavor_name TEXT NOT NULL,
             allergens TEXT
         )
+    ''')
+
+    # Insert initial data for seasonal flavors
+    c.execute('''
+        INSERT INTO seasonal_flavors (name, description, available) VALUES
+        ('Vanilla Bean', 'Classic vanilla with a hint of real vanilla beans', 1),
+        ('Strawberry Swirl', 'Fresh strawberries with a swirl of strawberry sauce', 1),
+        ('Chocolate Fudge', 'Rich chocolate with fudge chunks', 0)
     ''')
 
     conn.commit()
