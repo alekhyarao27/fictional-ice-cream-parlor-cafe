@@ -20,3 +20,11 @@ This is a simple web application for managing an ice cream parlor cafe using Fla
 3. Run the application:
    python app.py
 4. Access the application in your web browser at http://127.0.0.1:5000
+
+
+### Docker Setup
+1. Build the Docker image:
+  docker build -t ice_cream_parlor .
+2. Run the Docker container:
+  docker run -p 5000:5000 ice_cream_parlor
+3. Access the application in your web browser at http://127.0.0.1:5000.
